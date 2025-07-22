@@ -1,9 +1,6 @@
+import "./App.css";
 function App() {
-  return (
-    <>
-      <h1>Hello World 123</h1>
-    </>
-  );
+  return <div className="App">kelokee</div>;
 }
 
 export default App;
