@@ -3,7 +3,7 @@ function App() {
   return (
     <div className="App">
       <div className="backgroundImg">
-        <img src="" alt="" srcset="bg" />
+        <img src="" alt="" />
       </div>
       <div className="Navbar"></div>
       <div className="Hero">
