@@ -12,7 +12,7 @@ export const GoogleAuth: React.FC<GoogleAuthProps> = ({
   onSuccess,
   onError,
 }) => {
-  const { user, isAuthenticated, isLoading, signIn, signOut } = useGoogleAuth();
+  const { user, isAuthenticated, isLoading, signOut } = useGoogleAuth();
   const buttonRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

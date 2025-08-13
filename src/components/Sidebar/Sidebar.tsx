@@ -1,13 +1,14 @@
-import React from 'react'
-
 const Sidebar = () => {
-  const items=["All","Media","Articles","Audio"]
+  const items = ["All", "Media", "Articles", "Audio"];
   return (
     <div className="sidebar">
-
       <div className="icons-row">
-        <div className="icon">Focus<span>.</span>dev</div>
-        {items.map(item=><div>{item}</div>)}
+        <div className="icon">
+          Focus<span>.</span>dev
+        </div>
+        {items.map((item) => (
+          <div>{item}</div>
+        ))}
       </div>
       <div className="bottom-row">
         <div className="add-item">Add Source</div>
@@ -15,6 +16,6 @@ const Sidebar = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Sidebar
+export default Sidebar;

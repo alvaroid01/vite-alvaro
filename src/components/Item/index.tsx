@@ -1,21 +1,21 @@
-import React from 'react';
-import './styles.css';
+import React from "react";
+import "./styles.css";
 
 type ItemProps = {
   id: string;
-  type: 'news' | 'video' | 'music';
+  type: "news" | "video" | "music";
   title: string;
   timeAgo?: string;
 };
 
-export const Item: React.FC<ItemProps> = ({ 
-  id, 
-  type, 
-  title, 
-  timeAgo = '1h ago' 
+export const Item: React.FC<ItemProps> = ({
+  id,
+  type,
+  title,
+  timeAgo = "1h ago",
 }) => {
   return (
-    <div className="rss-item">
+    <div className="rss-item" key={id}>
       <div className="rss-item-content">
         <div className={`dot dot-${type}`}></div>
         <span className="item-title">{title}</span>
