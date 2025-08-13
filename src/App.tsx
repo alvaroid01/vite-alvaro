@@ -1,13 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import "./App.css";
 import Input from "./components/Input";
 import type { YouTubeVideoItem } from "./types/youtube";
 import { useEffect, useState } from "react";
-import Sidebar from './components/Sidebar/Sidebar';
-import MainContent from './components/MainContent/MainContent';
+import Sidebar from "./components/Sidebar/Sidebar";
+import MainContent from "./components/MainContent/MainContent";
 
 function App() {
   const [results, setResults] = useState<any>([]);
-
 
   const handleSearchResults = (results: YouTubeVideoItem[]) => {
     console.log("YouTube search results:", results);
@@ -19,12 +19,12 @@ function App() {
     const ls: any = localStorage?.getItem("prefs");
     if (!ls) localStorage.setItem("prefs", "[]");
   }, []);
-  const parsedLs = JSON.parse(localStorage?.getItem("prefs"));
+
   return (
     <div className="App">
       <Sidebar />
-      <MainContent/>
-    {/*   <h1>The complete animator's toolbox</h1>
+      <MainContent />
+      <h1>The complete animator's toolbox</h1>
       <div>{results.length}</div>
       <Input type="search" onSearchResults={handleSearchResults} />
       {results && results.length > 0 && (
@@ -51,7 +51,7 @@ function App() {
             </div>
           ))}
         </div>
-      )} */}
+      )}
     </div>
   );
 }
